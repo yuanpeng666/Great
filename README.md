@@ -1,4 +1,6 @@
-##Great库中文文档##
+
+
+##Great库文档
 - **$(select)**
 
 	**用法说明：**方法用于获取节点对象。
@@ -25,3 +27,24 @@
 - **insertAfter(newElement,targetElement)**
 
 	**用法说明：**向一个节点后面插入节点。
+
+		newElement要插入的对象node节点(object类型)
+		targetElement参照对象node节点(object类型)
+
+- **setColor()**
+
+	**用法说明：**该函数返回 随机十六进制颜色值。
+
+		SetColor() 该函数无需传入参数，return标准随机十六进制颜色值
+
+- **nextBrotherNode(node)**
+
+	**用法说明：**该函数找到距离node最近的下一个兄弟元素节点。
+
+		node为node节点(object类型)
+
+- **sunchild(node)**
+
+	**用法说明：**该函数找到该节点里面的所有子元素节点
+
+		node为node节点(object类型)
