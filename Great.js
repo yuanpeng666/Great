@@ -60,3 +60,30 @@ function sunchild(node){
 		}
 	}
 }
+//cookie相关操作
+//获取cookie
+function getCookie(qishi){
+	var cook = document.cookie;
+	var starIndex = cook.indexOf(qishi);
+	var endIndex = cook.indexOf(";",starIndex);
+	if(endIndex == -1){
+		endIndex = cook.length;
+	}
+	var re = cook.slice(starIndex,endIndex).split("=")[1]
+	return re;
+}
+//设置cookie
+function setCookie(data,date){
+	var d = new Date();
+	d.setDate(date);
+	for(var i in data){
+		document.cookie = i + "=" + data[i] + ";expires=" + d;
+	}
+}
+//删除cookie
+function removeCookie(data){
+	var d = new Date();
+	d.setDate(d.getDate() - 1);
+	document.cookie = data + "=a+;expires=" + d;
+}
+
